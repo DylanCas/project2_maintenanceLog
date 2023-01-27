@@ -1,6 +1,20 @@
 const router = require('express').Router();
 const User = require('/Users/chang/project2_maintenanceLog/models/User');
+const bcrypt = require('bcrypt');
+const auth = require('/Users/chang/project2_maintenanceLog/utils/auth');
 
+router.get('/', auth, async (req, res) => {
+    try {
+        const userData = await Category.findAll();
+        const users = userData.map(
+            (user) => user.get({ plain: true }));
+        //res.status(200).json(categories);
+        res.render('login', { users });
+
+    } catch(err) {
+        res.status(500).json({message: "An error occurred, please try again. If problem persists, contact us"});
+    }
+});
 
 router.post('/login', async (req, res) => {
     try {
