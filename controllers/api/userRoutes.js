@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const User = require('/Users/chang/project2_maintenanceLog/models/User');
-const bcrypt = require('bcrypt');
+
 
 router.post('/login', async (req, res) => {
     try {
