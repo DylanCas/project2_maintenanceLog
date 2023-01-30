@@ -24,7 +24,11 @@
   "homepage": "https://github.com/DylanCas/project2_maintenanceLog#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
+<<<<<<< HEAD
     "connect-session-sequelize": "^7.1.5",
+=======
+    "bootstrap": "^5.2.0",
+>>>>>>> 09f4f54c9b18f544bc4fe84aa1aea852ee3158c6
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-handlebars": "^6.0.7",
