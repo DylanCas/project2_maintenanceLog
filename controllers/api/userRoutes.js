@@ -1,7 +1,7 @@
 const router = require('express').Router();
-const User = require('/Users/chang/project2_maintenanceLog/models/User');
+const User = require('../../models/User');
 const bcrypt = require('bcrypt');
-const auth = require('/Users/chang/project2_maintenanceLog/utils/auth');
+const auth = require('../../utils/auth');
 
 router.get('/', auth, async (req, res) => {
     try {
