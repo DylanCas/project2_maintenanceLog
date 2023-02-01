@@ -6,11 +6,11 @@ const userData = require('./users.json');
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  await User.create({
-    name: '',
-    email: '',
-    password: '',
-});
+
+  const users = await User.bulkCreate(userData, {
+    individualHooks: true,
+    returning: true,
+  });
 };
 
 seedDatabase();

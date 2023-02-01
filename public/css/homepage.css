@@ -41,7 +41,12 @@ ul {
     padding: 0;
     display: flex;
     justify-content: right;
-    
+    position: relative;
+}
+
+.nav {
+  background-color: #111;
+  height: 75px;
 }
 
 .card {
@@ -55,8 +60,9 @@ ul {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: rgb(82, 82, 82);
     overflow-x: hidden;
+    margin-top: 75px;
   }
   
   

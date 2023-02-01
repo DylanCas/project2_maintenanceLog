@@ -3,15 +3,22 @@ const User = require('../../models/User');
 const bcrypt = require('bcrypt');
 const auth = require('../../utils/auth');
 
-router.get('/', auth, async (req, res) => {
-    try {
-        const userData = await Category.findAll();
-        const users = userData.map(
-            (user) => user.get({ plain: true }));
-        //res.status(200).json(categories);
-        res.render('login', { users });
 
+router.post('/', async (req, res) => {
+        try {
+            const dbUserData = await User.create({
+              username: req.body.username,
+              email: req.body.email,
+              password: req.body.password,
+            });
+    
+        req.session.save(() => {
+          req.session.logged_in = true;
+    
+          res.status(200).json(userDb);
+        });
     } catch(err) {
+        console.log(err);
         res.status(500).json({message: "An error occurred, please try again. If problem persists, contact us"});
     }
 });
