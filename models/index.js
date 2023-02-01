@@ -1,3 +1,6 @@
 const User = require('./User');
+const Vehicle = require('./vehicle')
 
-module.exports = { User };
+// Do we have need to create relations?
+
+module.exports = { User, Vehicle };
