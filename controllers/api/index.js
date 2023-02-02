@@ -4,7 +4,7 @@ const userApiRoutes = require('./userRoutes');
 const carmdRoutes = require('./carmdRoutes');
 
 
-router.use('/user', userApiRoutes);
+router.use('/users', userApiRoutes);
 
 router.use('/carmd', carmdRoutes);
 

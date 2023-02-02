@@ -1,6 +1,14 @@
 const User = require('./User');
-const Vehicle = require('./vehicle')
 
-// Do we have need to create relations?
+const Vehicle = require('./Vehicle')
+
+User.hasMany(Vehicle, {
+    foreignKey:'user_id',
+    onDelete: 'CASCADE'
+});
+
+Vehicle.belongsTo(User, {
+    foreignKey: 'user_id'
+});
 
 module.exports = { User, Vehicle };
