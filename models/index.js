@@ -1,4 +1,5 @@
 const User = require('./User');
+
 const Vehicle = require('./Vehicle')
 
 User.hasMany(Vehicle, {
@@ -9,4 +10,5 @@ User.hasMany(Vehicle, {
 Vehicle.belongsTo(User, {
     foreignKey: 'user_id'
 });
+
 module.exports = { User, Vehicle };
