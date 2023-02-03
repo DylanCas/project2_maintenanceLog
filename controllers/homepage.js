@@ -4,16 +4,22 @@ const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
   try {
-    const userData = await User.findAll({
-      attributes: { exclude: ['password'] },
-      order: [['name', 'ASC']],
+    const vehicleData = await Vehicle.findAll(req.session.user_id, {
+      include: [
+        {
+          model: Vehicle,
+          attributes: ['make', 'model'],
+        },
+      ],
     });
 
-    const users = userData.map((project) => project.get({ plain: true }));
+    const vehicles = vehicleData.map((vehicle) =>
+      vehicle.get({ plain: true })
+    );
+
 
     res.render('homepage', {
-       users,
-
+       vehicles,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -31,7 +37,7 @@ router.get('/singleVehicle', withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
 
-    res.render('profile', {
+    res.render('singleVehicle', {
       ...user,
       logged_in: true
     });
