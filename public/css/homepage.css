@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
   }
@@ -11,29 +10,44 @@ body {
 header {
     justify-content: center;
     display: flex;
+    align-items: center;
+}
+
+.header {
+  background-color: #111;
 }
 
 ul {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: right;
-    position: relative;
+    justify-content: flex-end;
+}
+
+li {
+  /* margin-top: 18.747px; */
 }
 
 .nav {
-  background-color: #111;
+  /* background-color: #111; */
   height: 75px;
+  justify-content: right;
+  align-items: center;
 }
 
 h1 {
   color: yellow;
-  margin-top: -65px;
+  /* margin-top: -65px; */
   z-index: 1;
 }
 
 .card {
     display: none
+}
+
+button {
+  background-color: #111;
+  color: red;
+  border: 0;
 }
   /* Style the side navigation */
   .sidenav {
@@ -83,7 +97,7 @@ h1 {
 
 /* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
+  background-color: #7e7e7e;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -97,7 +111,7 @@ h1 {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 160px;
+  min-width: 300px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
