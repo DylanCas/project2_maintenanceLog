@@ -5,6 +5,14 @@ class Vehicle extends Model {}
 
 Vehicle.init(
     {
+        user_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'user',
+                key: 'id',
+            }
+        },
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -26,13 +34,14 @@ Vehicle.init(
         },
         engine: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         mileage: {
             // may alter/need to alter, to STRING
             type: DataTypes.INTEGER,
             allowNull: true,
         }
+        // add user id
     },
     {
         sequelize,
