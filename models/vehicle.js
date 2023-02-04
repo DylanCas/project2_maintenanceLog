@@ -41,6 +41,7 @@ Vehicle.init(
             type: DataTypes.INTEGER,
             allowNull: true,
         }
+        // add user id
     },
     {
         sequelize,
