@@ -20,7 +20,7 @@ router.post("/vin/:vin", async (req, res) => {
       }
     });
     const { manufacturer, trim, transmission,...vehicleInfo } = response.data.data;
-    const vehicle = await Vehicle.create({...vehicleInfo, user_id: req.session.user_id});
+    const vehicle = await Vehicle.create({...vehicleInfo, user_id: req.session.userid});
     res.status(200).json(vehicle)
   } catch(error) {
     console.error(error);

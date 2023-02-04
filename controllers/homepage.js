@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {User, Vehicle } = require('../models');
+const { User, Vehicle } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
@@ -7,8 +7,8 @@ router.get('/', withAuth, async (req, res) => {
     const vehicleData = await Vehicle.findAll(req.session.user_id, {
       include: [
         {
-          model: User,
-          attributes: ['name'],
+          model: Vehicle,
+          attributes: ['make', 'model'],
         },
       ],
     });
@@ -27,28 +27,24 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
-router.get('/singleVehicle/:id', withAuth, async (req, res) => {
+router.get('/singleVehicle', withAuth, async (req, res) => {
   try {
 
-    const vehicleData = await Vehicle.findByPk(req.params.id, {
-      include: [
-        {
-           model: User,
-           attributes: ['name'],
-          },
-        ],
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Vehicle }],
     });
 
-    const vehicle = vehicleData.get({ plain: true });
+    const user = userData.get({ plain: true });
+
     res.render('singleVehicle', {
-      ...vehicle,
-      logged_in: req.session.logged_in
+      ...user,
+      logged_in: true
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
-
 
 router.get('/login', (req, res) => {
 
