@@ -1,8 +1,8 @@
 [
     {
-        "name" : "",
-        "email": "",
-        "password": ""
+        "name" : "default",
+        "email": "default",
+        "password": "default"
         
     }
 ]
