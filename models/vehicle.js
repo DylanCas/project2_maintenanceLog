@@ -1,9 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Vehicle extends Model {
-
-}
+class Vehicle extends Model {}
 
 Vehicle.init(
     {
@@ -19,21 +17,27 @@ Vehicle.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
-            autoIncrement: true,
+            autoIncrement: true, 
+        },
+        make: {
+            type: DataTypes.STRING,
+            allowNull: false,
         },
         model: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        trim: {
-            type: DataTypes.STRING,
+        year: {
+            // may alter/need to alter, to STRING
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
         engine: {
             type: DataTypes.STRING,
             allowNull: true,
         },
-        milage: {
+        mileage: {
+            // may alter/need to alter, to STRING
             type: DataTypes.INTEGER,
             allowNull: true,
         }
@@ -41,10 +45,11 @@ Vehicle.init(
     },
     {
         sequelize,
-        timestamps: false, 
-        modelName: 'vehicle',
+        timestamps: false,
+        // Prevent sequelize from renaming the table
         freezeTableName: true,
-    }
+        modelName: 'vehicle'
+      }
 );
 
 module.exports = Vehicle;
