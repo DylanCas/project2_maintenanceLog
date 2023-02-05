@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+}
+
+input {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.form-group {
+    padding: 5px;
+}
+
+#login-con {
+    background-color: black;
+    padding: 10px;
+}
+
+#signup-con {
+    background-color: grey;
+    padding: 10px;
+}
+
+button {
+    border-radius: 5px;
+    margin: 0 5px 0 5px;
+    padding: 5px;
+}
+
+.form-group1 {
+    background-color: black;
+}
+
+.form-group2 {
+    background-color: green;
+}
+
+
+
+
