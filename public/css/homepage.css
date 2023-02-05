@@ -1,127 +1,95 @@
 * {
-    box-sizing: border-box;
-  }
-  
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 header {
-    justify-content: center;
-    display: flex;
-    align-items: center;
-}
-
-.header {
-  background-color: #111;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-    justify-content: flex-end;
-}
-
-li {
-  /* margin-top: 18.747px; */
-}
-
-.nav {
-  /* background-color: #111; */
-  height: 75px;
-  justify-content: right;
+  justify-content: center;
+  display: flex;
   align-items: center;
 }
 
-h1 {
-  color: yellow;
-  /* margin-top: -65px; */
-  z-index: 1;
-}
-
 .card {
-    display: none
+  display: inline
 }
 
-button {
-  background-color: #111;
-  color: red;
-  border: 0;
+/* Style the side navigation */
+.sidenav {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #00E4D9;
+  overflow-x: hidden;
+  margin-top: 75px;
 }
-  /* Style the side navigation */
-  .sidenav {
-    height: 100%;
-    width: 300px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(82, 82, 82);
-    overflow-x: hidden;
-    margin-top: 75px;
-  }
-  
-  
-  /* Side navigation links */
-  .sidenav a {
-    color: white;
-    padding: 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color on hover */
-  .sidenav a:hover {
-    /*background-color: #ddd;*/
-    background-color: yellow;
-    color: black;
-  }
-  
-  /* Style the content */
-  .content {
-    margin-left: 200px;
-    padding-left: 20px;
-  }
+
+
+/* Side navigation links */
+.sidenav a {
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color on hover */
+.sidenav a:hover {
+  /*background-color: #ddd;*/
+  background-color: yellow;
+  color: black;
+}
+
+/* Style the content */
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
+}
 
 /* Dropdown Button */
 .dropbtn {
-  background-color: #7e7e7e;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  width:300px;
+background-color: #7e7e7e;
+color: white;
+padding: 16px;
+font-size: 16px;
+border: none;
+cursor: pointer;
+width:300px;
 }
 
 /* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
-  background-color: #7e7e7e;
+background-color: #7e7e7e;
 }
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
-  position: relative;
-  display: inline-block;
+position: relative;
+display: inline-block;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 300px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+display: none;
+position: absolute;
+background-color: #f1f1f1;
+min-width: 300px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
 }
 
 /* Change color of dropdown links on hover */
@@ -129,3 +97,4 @@ button {
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
