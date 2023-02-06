@@ -1,11 +1,48 @@
+{{#if logged_in}}
+  <div class="sidenav">
+  <ul class="nav">
+    <li class="nav-item">
+      <button id="homeBtn">Home</button>
+    </li>
+    <li class="nav-item">
+      <button id="logoutBtn">Logout</button>
+    </li>
+  </ul>
+  </div>
+  {{/if}}
+
 <form>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Vin</label>
-    <input type="vin" class="form-control" id="vin" aria-describedby="emailHelp">
+    <label for="vin" class="form-label">*Vin: </label>
+    <input type="text" class="form-control" id="vin" required>
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Driver Name/Alias</label>
-    <input type="name" class="form-control" id="driver-name">
+    <label for="vin-driver-name" class="form-label">Driver Name/Alias: </label>
+    <input type="text" class="form-control" id="vin-driver-name">
   </div>
-  <button type="submit" class="btn btn-primary">Add</button>
+  <button type="submit" class="btn btn-primary" id="addByVin">Add</button>
+</form>
+
+<form>
+  <div class="mb-3">
+    <label for="year" class="form-label">*Year: </label>
+    <input type="text" class="form-control" id="year" required> 
+  </div>
+  <div class="mb-3">
+    <label for="make" class="form-label">*Make: </label>
+    <input type="text" class="form-control" id="make" required>
+  </div>
+  <div class="mb-3">
+    <label for="model" class="form-label">*Model: </label>
+    <input type="text" class="form-control" id="model" required>
+  </div>
+  <div class="mb-3">
+    <label for="mileage" class="form-label">Mileage: </label>
+    <input type="text" class="form-control" id="mileage">
+  </div>
+  <div class="mb-3">
+    <label for="ymm-driver-name" class="form-label">Driver Name/Alias: </label>
+    <input type="text" class="form-control" id="ymm-driver-name">
+  </div>
+  <button type="submit" class="btn btn-primary" id="addByYmm">Add</button>
 </form>

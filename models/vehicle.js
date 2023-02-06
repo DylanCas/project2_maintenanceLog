@@ -40,8 +40,11 @@ Vehicle.init(
             // may alter/need to alter, to STRING
             type: DataTypes.INTEGER,
             allowNull: true,
+        },
+        vin: {
+            type: DataTypes.STRING,
+            allowNull: true,
         }
-        // add user id
     },
     {
         sequelize,
