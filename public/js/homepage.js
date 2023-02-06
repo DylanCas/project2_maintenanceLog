@@ -1,41 +1,51 @@
+const loginFormHandler = async (event) => {
+
+    event.preventDefault();
 
 
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
-  
-  // Close the dropdown menu if the user clicks outside of it
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  }
+  const email = document.querySelector('#email-login').value.trim();
+  const password = document.querySelector('#password-login').value.trim();
 
-  const logout = async () => {
-    const response = await fetch('/api/users/logout', {
+  if (email && password) {
+
+    const response = await fetch('/api/users/login', {
       method: 'POST',
+      body: JSON.stringify({ email, password }),
       headers: { 'Content-Type': 'application/json' },
     });
-  
+
     if (response.ok) {
       document.location.replace('/');
     } else {
-      alert('Failed to log out.');
+      alert('Failed to log in');
     }
-  };
+  }
+};
 
-  const goHome = async () => {
-    document.location.replace('/');
-  };
-  
-  document.querySelector('#logout').addEventListener('click', logout);
-  document.querySelector('#home').addEventListener('click', goHome);
+const signupFormHandler = async (event) => {
+  event.preventDefault();
+
+  const username = document.querySelector('#username-signup').value.trim();
+  const email = document.querySelector('#email-signup').value.trim();
+  const password = document.querySelector('#password-signup').value.trim();
+
+  if (username && email && password) {
+    const response = await fetch('/api/users', {
+      method: 'POST',
+      body: JSON.stringify({ username, email, password }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+      document.location.replace('/');
+    } else {
+      alert('Failed to sign up.');
+    }
+  }
+};
+
+document.querySelector('.login-form')
+  .addEventListener('submit', loginFormHandler);
+
+document.querySelector('.signup-form')
+  .addEventListener('submit', signupFormHandler);
