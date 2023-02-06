@@ -53,3 +53,4 @@ Vehicle.init(
 );
 
 module.exports = Vehicle;
+
