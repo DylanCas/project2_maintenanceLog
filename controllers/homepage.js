@@ -14,15 +14,6 @@ router.get('/',withAuth, async (req, res) => {
       ],
     });
 
-<<<<<<< HEAD
-    const vehicleList = vehicleData.map((vehicle) =>
-      vehicle.get({ plain: true })
-    );
-    
-    res.render('homepage', {
-      vehicles: vehicleList,
-      logged_in: req.session.logged_in,
-=======
     // Serialize data so the template can read it
     const vehicles = vehicleData.map((vehicle) => vehicle.get({ plain: true }));
 
@@ -30,7 +21,6 @@ router.get('/',withAuth, async (req, res) => {
     res.render('homepage', { 
       vehicles, 
       logged_in: req.session.logged_in 
->>>>>>> dca26d3cbf0371e938d76e34a77d1f8dc134dac2
     });
   } catch (err) {
     res.status(500).json(err);
@@ -101,9 +91,6 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-<<<<<<< HEAD
-module.exports = router;
-=======
 router.get("/vinForm", async (req, res) => {
   try {
     res.render('vinForm')
@@ -113,4 +100,3 @@ router.get("/vinForm", async (req, res) => {
 })
 
 module.exports = router;
->>>>>>> dca26d3cbf0371e938d76e34a77d1f8dc134dac2

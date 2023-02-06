@@ -7,16 +7,10 @@ const apiUrl = "http://api.carmd.com/v3.0";
 
 //  move to 
 router.post("/vin/:vin", async (req, res) => {
-<<<<<<< HEAD
-  if (!req.session.logged_in) {
-    res.status(401).json({message: 'Please log in to use this feature.'})
-  }
-=======
   console.log(req.params.vin)
   // if (!req.session.loggedIn) {
   //   res.status(401).json({message: 'Please log in to use this feature.'})
   // }
->>>>>>> dca26d3cbf0371e938d76e34a77d1f8dc134dac2
   const url = `${apiUrl}/decode?vin=${req.params.vin}`;
 
   //TODO: Double check this works once have CARMDKEY And TOKEN Available
