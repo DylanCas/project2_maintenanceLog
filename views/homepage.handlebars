@@ -1,23 +1,13 @@
-<section>
-  <div class="sidenav">
-    <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">My Vehicles</button>
-        <div id="myDropdown" class="dropdown-content">
-          <a href="/addVehicle">Add a Vehicle</a>
-          {{#each vehicles as |vehicle|}}
-           <a href="#">{{vehicle.make}} {{vehicle.model}} {{vehicle.year}}</a>
-          {{/each}}
-        </div>
-      </div>
-  </div>
-  <section class="containerCard">
-    <section class="flex-column cardSec">
-      {{#each vehicles as |vehicle|}}
-        {{> vehiclecards vehicle}}
-      {{/each}}
+{{#if logged_in}}
+<div class="sidenav">
+  <a href="/vinForm">Add new vehicle</a>
+  <section class="container">
+    <section class="flex-row justify-center">
+    {{#each vehicles as |vehicle|}}
+    <h4><a href="/singleVehicle/{{vehicle.id}}">{{vehicle.make}}</a></h4>
+      {{> vehiclecards vehicle}}
+    {{/each}}
     </section>
   </section>
-    
-    <link rel="stylesheet" href="css/style.css">
-  {{!-- <link rel="stylesheet" href="css/homepage.css"> --}}
-</section>
+</div>
+{{/if}}
