@@ -10,6 +10,13 @@ const logout = async () => {
     } else {
       alert('Failed to log out.');
     }
-  };
-  
-  document.getElementById('logoutBtn').addEventListener('click', logout);
+};
+
+document.getElementById('logoutBtn').addEventListener('click', logout);
+
+const goHome = () => {
+  document.location.replace('/')
+}
+
+document.getElementById('homeBtn').addEventListener('click', goHome)
+

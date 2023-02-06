@@ -5,11 +5,13 @@ const newFormHandler = async (event) => {
     const model = document.querySelector('#vehicle-model').value.trim();
     const year = document.querySelector('#vehicle-year').value.trim();
     const mileage = document.querySelector('#vehicle-mileage').value.trim();
+    const driver = document.querySelector('#driver-name').value.trim();
+    const notes = document.querySelector('#vehicle-notes').value.trim();
   
-    if (make && model && year && mileage) {
+    if (make && model && year && mileage && driver && notes) {
       const response = await fetch(`/api/vehicles`, {
         method: 'POST',
-        body: JSON.stringify({ make, model, year, mileage }),
+        body: JSON.stringify({ make, model, year, mileage, driver, notes }),
         headers: {
           'Content-Type': 'application/json',
         },

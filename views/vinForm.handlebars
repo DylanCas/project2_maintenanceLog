@@ -1,16 +1,8 @@
-<form id="placeholder">
-  <div class="mb-3">
-    <label for="vin" class="form-label">*Vin: </label>
-    <input type="text" class="form-control" id="vin" required>
-  </div>
-  <div class="mb-3">
-    <label for="vin-driver-name" class="form-label">Driver Name/Alias: </label>
-    <input type="text" class="form-control" id="vin-driver-name">
-  </div>
-  <button type="submit" class="btn btn-primary" id="addByVin">Add</button>
-</form>
-
 <form class="new-vehicle-form">
+  <div class="mb-3">
+    <label for="ymm-driver-name" class="form-label">Driver Name/Alias: </label>
+    <input type="text" class="form-control" id="driver-name">
+  </div>
   <div class="mb-3">
     <label for="year" class="form-label">*Year: </label>
     <input type="text" class="form-control" id="vehicle-year" required> 
@@ -28,10 +20,9 @@
     <input type="text" class="form-control" id="vehicle-mileage">
   </div>
   <div class="mb-3">
-    <label for="ymm-driver-name" class="form-label">Driver Name/Alias: </label>
-    <input type="text" class="form-control" id="ymm-driver-name">
+    <label for="notes" class="form-label">Add'l Notes: </label>
+    <input type="text" class="form-control" id="vehicle-notes">
   </div>
   <button type="submit" class="btn btn-primary">Add</button>
 </form>
 <script src="/js/vinForm.js" type="text/javascript"></script>
-{{!-- make js file for this page/form --}}

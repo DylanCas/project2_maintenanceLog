@@ -1,10 +1,11 @@
 [
    {
+    "driver": "Dylan",
     "make": "TOYOTA",
     "model": "COROLLA",
     "year": "2013",
     "engine": "L4, 1.8L; DOHC; 16V",
     "mileage": "150000",
-    "vin": ""
+    "notes": "Needs new tires"
    }
 ]
