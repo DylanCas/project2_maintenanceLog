@@ -1,10 +1,10 @@
-<form>
+<form class="form add-by-vin-form">
   <div class="mb-3">
     <label for="driver-name" class="form-label">Driver Name/Alias</label>
     <input type="text" class="form-control" id="driver-name" name="driver-name"required>
   </div>
   <div class="mb-3">
-    <label for="vin" class="form-label">Vin</label>
+    <label for="vin" class="form-label" id="Vin">Vin</label> <!-- -->
     <input type="text" class="form-control" id="vin" name="vin"required>
   </div>
   <div class="mb-3">
@@ -14,7 +14,7 @@
   <button type="submit" class="btn btn-primary">Add</button>
 </form>
 
-<form>
+<form class="form add-by-make-model-form">
   <div class="mb-3">
     <label for="driver-name" class="form-label">Driver Name/Alias</label>
     <input type="text" class="form-control" id="driver-name" name="driver-name" required>
@@ -37,3 +37,6 @@
   </div>
   <button type="submit" class="btn btn-primary">Add</button>
 </form>
+
+<script src="/js/addVehicle.js"></script>
+{{!-- <link rel="stylesheet" href="css/style.css"> --}}

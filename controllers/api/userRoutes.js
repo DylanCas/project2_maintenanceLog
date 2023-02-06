@@ -7,12 +7,13 @@ const auth = require('../../utils/auth');
  router.post('/', async (req, res) => {
          try {
             const UserData = await User.create({
-              name: req.body.name,
+              name: req.body.username,
               email: req.body.email,
               password: req.body.password,
            });
     
         req.session.save(() => {
+          req.session.user_id = UserData.id;
           req.session.logged_in = true;
     
           res.status(200).json(UserData);
@@ -44,7 +45,7 @@ router.post('/login', async (req, res) => {
 
         req.session.save(() => {
             req.session.logged_in = true;
-            req.session.userid = userDb.id
+            req.session.user_id = userDb.id
             res.status(200).json({message: 'Logged in!'});
         });
 
@@ -54,7 +55,8 @@ router.post('/login', async (req, res) => {
 });
 
 router.post('/logout', (req, res) => {
-    if (req.session.logged_in) {
+  res.redirect('/login');
+  if (req.session.logged_in) {
 
       req.session.destroy(() => {
         res.status(204).end();
@@ -62,6 +64,7 @@ router.post('/logout', (req, res) => {
     } else {
       res.status(404).end();
     }
+    
   });
 
 module.exports = router;
