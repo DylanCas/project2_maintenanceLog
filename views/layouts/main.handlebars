@@ -12,13 +12,15 @@
 <body>
 
 <header class="header"> 
-  <h1> <a href="/">Fast 'n' Furious</a></h1> 
+  <h1>Fast 'n' Furious</h1> 
 </header>
 
 <main>
-  {{#if logged_in}}
+  {{!-- {{#if logged_in}} --}}
+  <button id="homeBtn">Home</button>
   <button id="logoutBtn">Logout</button>
-  {{/if}}
+  {{!-- {{/if}} --}}
+
   {{{body}}}
 
 </main>

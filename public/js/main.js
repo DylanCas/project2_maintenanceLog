@@ -1,5 +1,5 @@
 const logout = async () => {
-    console.log('hello')
+    console.log('goodbye')
     const response = await fetch('/api/users/logout', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -10,6 +10,12 @@ const logout = async () => {
     } else {
       alert('Failed to log out.');
     }
-  };
+};
+
+const goHome = () => {
+  document.location.replace('/')
+  console.log('go home')
+}
   
   document.getElementById('logoutBtn').addEventListener('click', logout);
+  document.getElementById('homeBtn').addEventListener('click', goHome);
