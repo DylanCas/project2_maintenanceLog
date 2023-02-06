@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: "../images/engine-repair.jpg";
+    background-image: url("../images/engine-repair.jpg");
 }
 
 #accContainer {
