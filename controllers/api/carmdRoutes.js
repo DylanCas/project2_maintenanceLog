@@ -7,10 +7,12 @@ const apiUrl = "http://api.carmd.com/v3.0";
 
 
 router.post("/vin/:vin", async (req, res) => {
-  if (!req.session.loggedIn) {
+  if (!req.session.logged_in) {
     res.status(401).json({message: 'Please log in to use this feature.'})
   }
   const url = `${apiUrl}/decode?vin=${req.params.vin}`;
+
+  //TODO: Double check this works once have CARMDKEY And TOKEN Available
   try {
     const response = await axios.get(url, {
       headers: {
@@ -26,6 +28,24 @@ router.post("/vin/:vin", async (req, res) => {
     console.error(error);
     res.status(500).json(error)
   }
+});
+
+
+
+router.post("/makemodel", async (req, res) => {
+  if (!req.session.logged_in) {
+    res.status(401).json({message: 'Please log in to use this feature.'})
+  }
+
+  try {
+    const vehicleInfo = req.body;
+    const vehicle = await Vehicle.create({...vehicleInfo, user_id: req.session.userid});
+    res.status(200).json(vehicle)
+  } catch(error) {
+    console.error(error);
+    res.status(500).json(error)
+  }
+
 });
 
 module.exports = router;
