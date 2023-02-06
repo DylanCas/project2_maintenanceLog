@@ -1,5 +1,3 @@
-
-
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunction() {
@@ -39,3 +37,4 @@ const goHome = async () => {
 
 document.querySelector('#logout').addEventListener('click', logout);
 document.querySelector('#home').addEventListener('click', goHome);
+document.querySelector('#homeIcon').addEventListener('click', goHome);
