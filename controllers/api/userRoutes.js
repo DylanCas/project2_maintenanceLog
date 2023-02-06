@@ -4,24 +4,25 @@ const bcrypt = require('bcrypt');
 const auth = require('../../utils/auth');
 
 
-router.post('/', async (req, res) => {
-        try {
-            const dbUserData = await User.create({
-              username: req.body.username,
+ router.post('/', async (req, res) => {
+         try {
+            const UserData = await User.create({
+              name: req.body.name,
               email: req.body.email,
               password: req.body.password,
-            });
+           });
     
         req.session.save(() => {
+          req.session.user_id = UserData.id;
           req.session.logged_in = true;
     
-          res.status(200).json(userDb);
+          res.status(200).json(UserData);
         });
-    } catch(err) {
+   } catch(err) {
         console.log(err);
         res.status(500).json({message: "An error occurred, please try again. If problem persists, contact us"});
     }
-});
+ });
 
 router.post('/login', async (req, res) => {
     try {
@@ -43,8 +44,8 @@ router.post('/login', async (req, res) => {
         }
 
         req.session.save(() => {
-            req.session.userid = userDb.id
-            req.session.loggedIn = true;
+            req.session.logged_in = true;
+            req.session.user_id = userDb.id
             res.status(200).json({message: 'Logged in!'});
         });
 

@@ -7,11 +7,15 @@ Vehicle.init(
     {
         user_id: {
             type: DataTypes.INTEGER,
-            allowNull: false,
+            allowNull: true,
             references: {
                 model: 'user',
                 key: 'id',
             }
+        },
+        driver: {
+            type: DataTypes.STRING,
+            allowNull: false,
         },
         id: {
             type: DataTypes.INTEGER,
@@ -39,9 +43,12 @@ Vehicle.init(
         mileage: {
             // may alter/need to alter, to STRING
             type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        notes: {
+            type: DataTypes.STRING,
             allowNull: true,
         }
-        // add user id
     },
     {
         sequelize,

@@ -1,56 +1,17 @@
-<body>
-    <header class="header"> 
-        <h1>Fast and Furious</h1> 
-    
-    <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Active</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <button>Logout</button>
-        </li>
-    </ul>
-</header>
+{{#if logged_in}}
+<div class="sidenav">
+  <a href="/vinForm">Add new vehicle</a>
+  <section class="container">
+    <section class="flex-row justify-center">
+    {{#each vehicles as |vehicle|}}
+    <section class="vehicleItem">
+      <h4><a href="/singleVehicle/{{vehicle.id}}">{{vehicle.make}}</a></h4>
+      <button style="font-size:24px">Delete <i class="fa fa-trash-o"></i></button>
+    </section>
+    {{/each}}
+    </section>
+  </section>
+</div>
+{{/if}}
 
-  <main>
-
-   {{{body}}}
-    <!-- {{!-- <script src="../../public/js/log.js"></script> --}}-- -->
-
-    <div class="sidenav">
-        <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">My Vehicles</button>
-            <div id="myDropdown" class="dropdown-content">
-              <a href="#">Add New Vehicle</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
-            </div>
-          </div>
-        <!-- <a href="#">Link</a>
-        <a href="#">Link</a> -->
-  </div>
-
-    <section>      
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-        </div>
-</section>
-    <script src="../../public/js/log.js"></script>
-    <script src="../../public/js/homepage.js"></script>
-  </main>
-
-  <!-- {{!-- <footer> --}} -->
-     <!-- Consider a footer, maybe with info about the app/contact info?  -->
-  <!-- {{!-- </footer> --}}  -->
-
-</body>
-</html>
 

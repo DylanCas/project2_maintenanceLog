@@ -17,6 +17,16 @@ header {
   background-color: #111;
 }
 
+/* Custom CSS */
+.vehicleItem {
+  background-color: #111;
+  margin: 2%;
+}
+
+
+
+/* Custom CSS */
+
 ul {
     margin: 0;
     padding: 0;
@@ -24,7 +34,7 @@ ul {
 }
 
 li {
-  /* margin-top: 18.747px; */
+  margin-top: 18.747px;
 }
 
 .nav {
