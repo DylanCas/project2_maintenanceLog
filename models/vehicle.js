@@ -4,14 +4,47 @@ const sequelize = require("../config/connection");
 class Vehicle extends Model {}
 
 Vehicle.init(
-  {
-    user_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: "user",
-        key: "id",
-      },
+    {
+        user_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'user',
+                key: 'id',
+            }
+        },
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true, 
+        },
+        make: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        model: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        year: {
+            // may alter/need to alter, to STRING
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        engine: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        mileage: {
+            // may alter/need to alter, to STRING
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        vin: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        }
     },
     id: {
       type: DataTypes.INTEGER,

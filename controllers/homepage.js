@@ -56,4 +56,12 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+router.get("/vinForm", async (req, res) => {
+  try {
+    res.render('vinForm')
+  } catch (err) {
+    res.status(400, 500).json(err);
+  }
+})
+
 module.exports = router;
