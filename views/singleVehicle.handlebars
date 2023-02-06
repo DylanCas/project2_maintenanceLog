@@ -1,26 +1,17 @@
-{{#if logged_in}}
-  <div class="sidenav">
-    <a href="/vinForm">Add new vehicle</a>
-    <section class="container">
-      <section class="flex-row justify-center">
-      {{#each vehicles as |vehicle|}}
-      <section class="vehicleItem">
-        <h4><a href="/singleVehicle/{{vehicle.id}}">{{vehicle.make}}, {{vehicle.model}}</a></h4>
-        <button style="font-size:24px" id="deleteVehicleBtn">Delete <i class="fa fa-trash-o"></i></button>
-      </section>
-      {{/each}}
-      </section>
+<div class="text-center single-vehicle-card">
+  <section class="text-center vehicle-info">
+    <section class="text-center">
+      <p class="driver">Driver: {{driver}}</p>  
+      <p class="make"> Make: {{make}}</p>
+      <p class="model">Model: {{model}}</p>
     </section>
-  </div>
-  {{/if}}
-
-<div class="text-center">
-  {{!-- user.name does not appear? --}}
-  <p>Driver: {{driver}}</p>
-  <p> Make: {{make}}</p>
-  <p>Model: {{model}}</p>
-  <p>Year: {{year}}</p>
-  <p>Car Mileage: {{mileage}}</p>
-  <p><span class="mile-amount">{{mileage}}</span> miles currently</p>
-  <p>Notes: {{notes}}</p>
+    <section class="text-center">
+      <p class="year">Year: {{year}}</p>
+      <p class="mileage">Car Mileage: {{mileage}}</p>
+    </section>
+  </section>
+  <section class="text-center vehicle-notes">
+    <p>Notes:</p>
+    <p>{{notes}}</p>
+  </section>
 </div>
