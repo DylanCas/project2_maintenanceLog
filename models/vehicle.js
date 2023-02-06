@@ -39,7 +39,7 @@ Vehicle.init(
         mileage: {
             // may alter/need to alter, to STRING
             type: DataTypes.INTEGER,
-            allowNull: true,
+            allowNull: false,
         },
         vin: {
             type: DataTypes.STRING,
