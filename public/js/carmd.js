@@ -1,4 +1,4 @@
-const router = require("express").Router();
+/*const router = require("express").Router();
 const Vehicle = require('../../models/vehicle')
 const axios = require('axios');
 require("dotenv").config();
@@ -30,4 +30,8 @@ router.post("/vin/:vin", async (req, res) => {
   }
 });
 
-module.exports = router;
+module.exports = router;*/
+
+let vin = document.getElementById('vin').value;
+console.log(vin)
+const vinFormBtn = document
