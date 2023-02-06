@@ -13,13 +13,12 @@ router.get('/', withAuth, async (req, res) => {
       ],
     });
 
-    const vehicles = vehicleData.map((vehicle) =>
+    const vehicleList = vehicleData.map((vehicle) =>
       vehicle.get({ plain: true })
     );
-
-
+    
     res.render('homepage', {
-       vehicles,
+      vehicles: vehicleList,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -45,6 +44,18 @@ router.get('/singleVehicle', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+router.get('/addVehicle', withAuth, async(req, res) => {
+  try {
+    if (!req.session.logged_in) {
+      res.redirect('/login');
+     return;
+   }
+    res.render('addVehicleForm');
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
 
 router.get('/login', (req, res) => {
 
