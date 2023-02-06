@@ -1,20 +1,101 @@
+/* Main styling */
+
+
+:root {
+  --primary: #E4000B;
+  --secondary: #00E4D9;
+  /* --tertiary: #fa7f72;
+  --quatrinary: #6c6b67;
+  --light: #ebebeb;
+  --dark: #182c23;
+  --error: rgb(228, 46, 1); */
+  --border-radius: 0.3rem;
+}
+
 * {
-    box-sizing: border-box;
-  }
-  
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 header {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--primary);
+  gap: 30%;
+  align-items: center;
+}
+
+ul {
+  align-self: flex-end;
+}
+
+li {
+  /* margin-top: 18.747px;  */
+  align-items: center;
+}
+
+span {
+background: url('https://cdn-icons-png.flaticon.com/64/3113/3113468.png');
+height: 64px;
+width: 64px;
+flex-basis: auto;
+align-self: left;
+align-items: center;
+}
+
+#home, #logout {
+  background-color: var(--secondary);
+  color: white;
+  border: 0;
+  /* flex-grow: 1; */
+  /* border-radius: 5px; */
+  padding: 10px;
+  font-size: 20px;
+  border-radius: var(--border-radius);
+}
+
+#home {
+  margin-right: 30px;
+}
+
+h1 {
+  align-self: center; 
+  flex-basis: auto;
+}
+
+.nav {
+  /* background-color: #111; */
+  height: 75px;
+  align-self: right;
+  align-items: center;
+  flex-basis: auto;
+}
+
+
+
+
+
+
+/* Homepage Styling */
+
+/* header {
     justify-content: center;
     display: flex;
     align-items: center;
-}
+} */
 
-.card {
-    display: inline
+.cardSec {
+  display: flex;
+  justify-content: center;
+  align-items: right;
+  background-color: white;
+  margin-left: 300px;
+  width: 25%;
+  padding: 10px;
 }
 
   /* Style the side navigation */
@@ -97,3 +178,10 @@ header {
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+
+
+
+
+
+

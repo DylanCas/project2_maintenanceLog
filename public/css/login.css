@@ -1,11 +1,11 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
 }
 
-body {
+body { */
     /* background-image: url("../images/engine-repair.jpg"); */
-    background-color: slategray;
+    /* background-color: slategray;
 }
 
 #accContainer {
@@ -20,18 +20,18 @@ h2 {
     justify-content: center;
     flex-wrap: column;
     max-width: 100%;
-}
+} */
 
 /* form {
     display: flex;
     justify-content: center;
     flex-direction: column;
 } */
-
+/* 
 input {
-    display: flex;
+    display: flex; */
     /* justify-content: center; */
-    background-color: white;
+    /* background-color: white;
     border-radius: 5px;
 }
 
@@ -64,7 +64,7 @@ button {
     border-radius: 5px;
     margin: 10px 5px 0 5px;
     padding: 5px;
-}
+} */
 
 
 
