@@ -2,28 +2,35 @@
 
 
 :root {
-  --primary: #E4000B;
-  --secondary: #00E4D9;
-  /* --tertiary: #fa7f72;
-  --quatrinary: #6c6b67;
+  --primary: #395792f5;
+  --secondary:  #554522;
+  --tertiary: #463737;
+  /* --quatrinary: #6c6b67;
   --light: #ebebeb;
   --dark: #182c23;
-  --error: rgb(228, 46, 1); */
-  --border-radius: 0.3rem;
+  --error: rgb(228, 46, 1);
+  --border-radius: 0.3rem; */
 }
+
+.hide {
+  display: none;
+}
+
 
 
 /* login styling */
 
 
- * {
+* {
     margin: 0;
     padding: 0;
 }
 
 body { 
     background-image: url("../images/engine-repair.jpg"); 
-    background-color: slategray;
+    /* background-color: slategray; */
+    height: auto;
+    max-width: 100%;
 }
 
 #accContainer {
@@ -49,7 +56,7 @@ h2 {
 input {
     display: flex; 
     justify-content: center; 
-  background-color: white;
+    background-color: white;
     border-radius: 5px;
 }
 
@@ -57,9 +64,10 @@ input {
     padding: 5px;
 }
 
-#login-con {
+#login-con, #signup-con {
     display: flex;
-    background-color: rgb(134, 72, 72);
+    background-color: var(--tertiary);
+    color: white;
     padding: 10px;
     max-width: 384.27px;
     padding: 50px;
@@ -68,21 +76,18 @@ input {
     justify-content: center;
 }
 
-#signup-con {
-    display: flex;
-    background-color: rgb(85, 150, 161);
-    padding: 10px;
-    max-width: 384.27px;
-    padding: 50px;
-    border-radius: 20px;
-    justify-content: center;
-}
+
 
 button {
     border-radius: 5px;
     margin: 10px 5px 0 5px;
     padding: 5px;
-} */
+} 
+
+#access {
+  display: flex;
+  justify-content: center;
+}
 
 * {
   box-sizing: border-box;
@@ -110,7 +115,7 @@ li {
   align-items: center;
 }
 
-span {
+#homeIcon {
 background: url('https://cdn-icons-png.flaticon.com/64/3113/3113468.png');
 height: 64px;
 width: 64px;
@@ -178,7 +183,7 @@ h1 {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #00E4D9;
+    background-color: var(--secondary);
     overflow-x: hidden;
     margin-top: 75px;
   }
@@ -251,6 +256,23 @@ h1 {
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
+
+
+
+
+
+
+/* vinForm styling */
+
+.add-by-make-model-form {
+  display: flex;
+  justify-content: center;
+  align-items: right;
+  max-width: 50%;
+  margin-left: 25%;
+  background-color: var(--secondary);
+  padding: 15px 15px 15px 15px;
+}
 
 
 
