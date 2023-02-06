@@ -1,3 +1,5 @@
+
+
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunction() {
@@ -30,6 +32,10 @@ function myFunction() {
       alert('Failed to log out.');
     }
   };
+
+  const goHome = async () => {
+    document.location.replace('/');
+  };
   
   document.querySelector('#logout').addEventListener('click', logout);
-  
+  document.querySelector('#home').addEventListener('click', goHome);
