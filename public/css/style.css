@@ -1,0 +1,259 @@
+/* Main styling */
+
+
+:root {
+  --primary: #E4000B;
+  --secondary: #00E4D9;
+  /* --tertiary: #fa7f72;
+  --quatrinary: #6c6b67;
+  --light: #ebebeb;
+  --dark: #182c23;
+  --error: rgb(228, 46, 1); */
+  --border-radius: 0.3rem;
+}
+
+
+/* login styling */
+
+
+ * {
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    background-image: url("../images/engine-repair.jpg"); 
+    background-color: slategray;
+}
+
+#accContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10%;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: column;
+    max-width: 100%;
+} 
+
+ form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+} 
+ 
+input {
+    display: flex; 
+    justify-content: center; 
+  background-color: white;
+    border-radius: 5px;
+}
+
+.form-group1, .form-group2 {
+    padding: 5px;
+}
+
+#login-con {
+    display: flex;
+    background-color: rgb(134, 72, 72);
+    padding: 10px;
+    max-width: 384.27px;
+    padding: 50px;
+    margin: 3%;
+    border-radius: 20px;
+    justify-content: center;
+}
+
+#signup-con {
+    display: flex;
+    background-color: rgb(85, 150, 161);
+    padding: 10px;
+    max-width: 384.27px;
+    padding: 50px;
+    border-radius: 20px;
+    justify-content: center;
+}
+
+button {
+    border-radius: 5px;
+    margin: 10px 5px 0 5px;
+    padding: 5px;
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--primary);
+  gap: 30%;
+  align-items: center;
+}
+
+ul {
+  align-self: flex-end;
+}
+
+li {
+  /* margin-top: 18.747px;  */
+  align-items: center;
+}
+
+span {
+background: url('https://cdn-icons-png.flaticon.com/64/3113/3113468.png');
+height: 64px;
+width: 64px;
+flex-basis: auto;
+align-self: left;
+align-items: center;
+}
+
+#home, #logout {
+  background-color: var(--secondary);
+  color: white;
+  border: 0;
+  /* flex-grow: 1; */
+  /* border-radius: 5px; */
+  padding: 10px;
+  font-size: 20px;
+  border-radius: var(--border-radius);
+}
+
+#home {
+  margin-right: 30px;
+}
+
+h1 {
+  align-self: center; 
+  flex-basis: auto;
+}
+
+.nav {
+  /* background-color: #111; */
+  height: 75px;
+  align-self: right;
+  align-items: center;
+  flex-basis: auto;
+}
+
+
+
+
+
+
+/* Homepage Styling */
+
+/* header {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+} */
+
+.cardSec {
+  display: flex;
+  justify-content: center;
+  align-items: right;
+  background-color: white;
+  margin-left: 300px;
+  width: 25%;
+  padding: 10px;
+}
+
+  /* Style the side navigation */
+  .sidenav {
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #00E4D9;
+    overflow-x: hidden;
+    margin-top: 75px;
+  }
+  
+  
+  /* Side navigation links */
+  .sidenav a {
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color on hover */
+  .sidenav a:hover {
+    /*background-color: #ddd;*/
+    background-color: yellow;
+    color: black;
+  }
+  
+  /* Style the content */
+  .content {
+    margin-left: 200px;
+    padding-left: 20px;
+  }
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #7e7e7e;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width:300px;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #7e7e7e;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+
+
+
+
+
