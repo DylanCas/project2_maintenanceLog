@@ -1,11 +1,4 @@
-
-
-
-
-
-
 /* Main styling */
-
 
 :root {
   --primary: #395792f5;
@@ -23,13 +16,7 @@
   display: none;
 }
 
-
-
-
 /* login styling */
-
-
-
 
 * {
     margin: 0;
@@ -42,6 +29,7 @@ body {
     height: auto;
     max-width: 100%;
     font-family: Arial, Helvetica, sans-serif;
+    background-size: cover;
 }
 
 #accContainer {
@@ -145,11 +133,6 @@ h1 {
   align-items: center;
   flex-basis: auto;
 }
-
-
-
-
-
 
 /* Homepage Styling */
 
@@ -262,8 +245,6 @@ h4 {
   background-color: var(--delete);
   align-self: right;
 }
-
-
 
 /* vinForm styling */
 
