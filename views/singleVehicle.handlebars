@@ -1,11 +1,17 @@
-<div class="text-center">
-  <h2>car model:{{model}}</h2>
-  <p> year: {{year}}</p>
-  <p>car mileage: {{mileage}}</p>
-  <p> {{user.name}} searched for {{make}}</p>
-  <p>
-
-    <span class="mile-amount">{{mileage}}</span>
-    miles currently
-  </p>
+<div class="text-center single-vehicle-card">
+  <section class="text-center vehicle-info">
+    <section class="text-center">
+      <p class="driver">Driver: {{driver}}</p>  
+      <p class="make"> Make: {{make}}</p>
+      <p class="model">Model: {{model}}</p>
+    </section>
+    <section class="text-center">
+      <p class="year">Year: {{year}}</p>
+      <p class="mileage">Car Mileage: {{mileage}}</p>
+    </section>
+  </section>
+  <section class="text-center vehicle-notes">
+    <p>Notes:</p>
+    <p>{{notes}}</p>
+  </section>
 </div>

@@ -13,6 +13,10 @@ Vehicle.init(
                 key: 'id',
             }
         },
+        driver: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -41,7 +45,7 @@ Vehicle.init(
             type: DataTypes.INTEGER,
             allowNull: false,
         },
-        vin: {
+        notes: {
             type: DataTypes.STRING,
             allowNull: true,
         },

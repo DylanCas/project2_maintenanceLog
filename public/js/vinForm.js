@@ -1,23 +1,27 @@
 const newFormHandler = async (event) => {
-  event.preventDefault();
-  const make = document.querySelector("#vehicle-make").value.trim();
-  const model = document.querySelector("#vehicle-model").value.trim();
-  const year = document.querySelector("#vehicle-year").value.trim();
-  const mileage = document.querySelector("#vehicle-mileage").value.trim();
-  const driver = document.querySelector("#driver-name").value.trim();
-  const notes = document.querySelector("#vehicle-notes").value.trim();
-  if (make && model && year && mileage && driver && notes) {
-    const response = await fetch(`/api/vehicles`, {
-      method: "POST",
-      body: JSON.stringify({ make, model, year, mileage, driver, notes }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    if (response.ok) {
-      document.location.replace("/");
-    } else {
-      alert("Failed to create vehicle");
+    event.preventDefault();
+  
+    const make = document.querySelector('#vehicle-make').value.trim();
+    const model = document.querySelector('#vehicle-model').value.trim();
+    const year = document.querySelector('#vehicle-year').value.trim();
+    const mileage = document.querySelector('#vehicle-mileage').value.trim();
+    const driver = document.querySelector('#driver-name').value.trim();
+    const notes = document.querySelector('#vehicle-notes').value.trim();
+  
+    if (make && model && year && mileage && driver && notes) {
+      const response = await fetch(`/api/vehicles`, {
+        method: 'POST',
+        body: JSON.stringify({ make, model, year, mileage, driver, notes }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+  
+      if (response.ok) {
+        document.location.replace('/');
+      } else {
+        alert('Failed to create vehicle');
+      }
     }
   }
 };
@@ -32,11 +36,14 @@ const delButtonHandler = async (event) => {
     } else {
       alert("Failed to delete project");
     }
-  }
-};
-document
-  .querySelector(".new-vehicle-form")
-  .addEventListener("submit", newFormHandler);
-document
-  .querySelector(".vehicle-list")
-  .addEventListener("click", delButtonHandler);
+  };
+  
+
+  
+  document
+    .querySelector('.new-vehicle-form')
+    .addEventListener('submit', newFormHandler);
+    // document
+    // .querySelector('.vehicle-list')
+    // .addEventListener('click', delButtonHandler);
+  
