@@ -8,17 +8,21 @@
   /* --quatrinary: #6c6b67;
   --light: #ebebeb;
   --dark: #182c23;
-  --error: rgb(228, 46, 1);
-  --border-radius: 0.3rem; */
+  --error: rgb(228, 46, 1);*/
+  --delete: red;
+  --border-radius: 0.3rem; 
 }
 
-.hide {
+#hide {
   display: none;
 }
 
 
 
+
 /* login styling */
+
+
 
 
 * {
@@ -31,6 +35,7 @@ body {
     /* background-color: slategray; */
     height: auto;
     max-width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #accContainer {
@@ -43,7 +48,7 @@ body {
 h2 {
     display: flex;
     justify-content: center;
-    flex-wrap: column;
+    /* flex-wrap: column; */
     max-width: 100%;
 } 
 
@@ -76,8 +81,6 @@ input {
     justify-content: center;
 }
 
-
-
 button {
     border-radius: 5px;
     margin: 10px 5px 0 5px;
@@ -89,31 +92,15 @@ button {
   justify-content: center;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 header {
   display: flex;
   justify-content: space-evenly;
   background-color: var(--primary);
-  gap: 30%;
+  gap: 25%;
   align-items: center;
 }
 
-ul {
-  align-self: flex-end;
-}
 
-li {
-  /* margin-top: 18.747px;  */
-  align-items: center;
-}
 
 #homeIcon {
 background: url('https://cdn-icons-png.flaticon.com/64/3113/3113468.png');
@@ -132,7 +119,7 @@ align-items: center;
   /* border-radius: 5px; */
   padding: 10px;
   font-size: 20px;
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius)
 }
 
 #home {
@@ -142,6 +129,7 @@ align-items: center;
 h1 {
   align-self: center; 
   flex-basis: auto;
+  margin-left: 150px;
 }
 
 .nav {
@@ -158,12 +146,6 @@ h1 {
 
 
 /* Homepage Styling */
-
-/* header {
-    justify-content: center;
-    display: flex;
-    align-items: center;
-} */
 
 .cardSec {
   display: flex;
@@ -256,15 +238,30 @@ h1 {
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
+.vehicleItem {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  /* gap: 48%; */
+}
 
+h4 {
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+}
 
-
+#delete {
+  border-radius: var(--border-radius);
+  background-color: var(--delete);
+  align-self: right;
+}
 
 
 
 /* vinForm styling */
 
-.add-by-make-model-form {
+.new-vehicle-form {
   display: flex;
   justify-content: center;
   align-items: right;
