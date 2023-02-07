@@ -45,7 +45,7 @@
   /* Change color on hover */
   .sidenav a:hover {
     /*background-color: #ddd;*/
-    background-color: yellow;
+    background-color: red;
     color: black;
   }
   
