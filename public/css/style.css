@@ -1,3 +1,9 @@
+
+
+
+
+
+
 /* Main styling */
 
 
@@ -111,7 +117,7 @@ align-self: left;
 align-items: center;
 }
 
-#home, #logout {
+#homeBtn, #logoutBtn {
   background-color: var(--secondary);
   color: white;
   border: 0;
@@ -270,9 +276,3 @@ h4 {
   background-color: var(--secondary);
   padding: 15px 15px 15px 15px;
 }
-
-
-
-
-
-
