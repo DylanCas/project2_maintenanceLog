@@ -1,0 +1,17 @@
+{{#if logged_in}}
+<div class="sidenav">
+  <a href="/vinForm">Add new vehicle</a>
+  <section class="container">
+    <section class="flex-row justify-center">
+    {{#each vehicles as |vehicle|}}
+    <section class="vehicleItem">
+      <h4><a href="/singleVehicle/{{vehicle.id}}">{{vehicle.make}}, {{vehicle.model}}</a></h4>
+      <button style="font-size:24px">Delete <i class="fa fa-trash-o"></i></button>
+    </section>
+    {{/each}}
+    </section>
+  </section>
+</div>
+{{/if}}
+
+
