@@ -2,6 +2,8 @@
 
 An application for keeping records of vehicle maintenance
 
+## Deployed Link: https://github.com/DylanCas/project2_maintenanceLog 
+
 ## Description:
 
 An application meant to hold details about a vehicle relative to its maintenance and care cycle. Make, model, year, and option of including mileage.
@@ -16,4 +18,5 @@ An application meant to hold details about a vehicle relative to its maintenance
 License
 This project is licensed under the MIT License
 
-<!-- insert screenshot below when finished -->
+
+![fast and furious](public/images/FastnFurious.JPG)
