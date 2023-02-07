@@ -19,19 +19,40 @@ header {
 }
 
 /* Custom CSS */
-/* ***************************** */
+.forms {
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+  width: 75%;
+}
+
+.login-form {
+  /* border: 1px solid red; */
+  background-color: rgb(82, 82, 82);
+  padding: 2%;
+  border-radius: 4%;
+}
+.signup-form {
+  /* border: 1px solid red; */
+  background-color: rgb(82, 82, 82);
+  padding: 2%;
+  border-radius: 5%;
+}
+
 .vehicleItem {
   background-color: #111;
   margin: 2%;
   border: 1px solid red;
 }
 
-/* .sidenav {
-  border: 1px solid blue;
-} */
+.sidenav {
+  /* border: 1px solid blue; */
+  margin-top: 1%;
+}
 
 .single-vehicle-card {
-  /* border: 1px solid green; */
+  border: 1px solid green;
   background-color: rgb(82, 82, 82);
   color: white;
   margin: 5%;
@@ -48,7 +69,6 @@ header {
   margin-top: 5%;
 }
 
-/* ***************************** */
 /* Custom CSS */
 
 ul {
@@ -69,7 +89,7 @@ li {
 }
 
 h1 {
-  color: red;
+  color: yellow;
   /* margin-top: -65px; */
   z-index: 1;
 }
