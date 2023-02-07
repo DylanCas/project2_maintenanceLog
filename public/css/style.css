@@ -1,6 +1,5 @@
 /* Main styling */
 
-
 :root {
   --primary: #395792f5;
   --secondary:  #554522;
@@ -17,13 +16,7 @@
   display: none;
 }
 
-
-
-
 /* login styling */
-
-
-
 
 * {
     margin: 0;
@@ -36,6 +29,7 @@ body {
     height: auto;
     max-width: 100%;
     font-family: Arial, Helvetica, sans-serif;
+    background-size: cover;
 }
 
 #accContainer {
@@ -111,7 +105,7 @@ align-self: left;
 align-items: center;
 }
 
-#home, #logout {
+#homeBtn, #logoutBtn {
   background-color: var(--secondary);
   color: white;
   border: 0;
@@ -139,11 +133,6 @@ h1 {
   align-items: center;
   flex-basis: auto;
 }
-
-
-
-
-
 
 /* Homepage Styling */
 
@@ -182,7 +171,7 @@ h1 {
   /* Change color on hover */
   .sidenav a:hover {
     /*background-color: #ddd;*/
-    background-color: yellow;
+    background-color: red;
     color: black;
   }
   
@@ -257,8 +246,6 @@ h4 {
   align-self: right;
 }
 
-
-
 /* vinForm styling */
 
 .new-vehicle-form {
@@ -270,9 +257,3 @@ h4 {
   background-color: var(--secondary);
   padding: 15px 15px 15px 15px;
 }
-
-
-
-
-
-

@@ -6,7 +6,7 @@
     {{#each vehicles as |vehicle|}}
     <section class="vehicleItem">
       <h4><a href="/singleVehicle/{{vehicle.id}}">{{vehicle.make}}, {{vehicle.model}}</a></h4>
-      <button style="font-size:24px">Delete <i class="fa fa-trash-o"></i></button>
+      <button id="delete" style="font-size:24px">Delete <i class="fa fa-trash-o"></i></button>
     </section>
     {{/each}}
     </section>

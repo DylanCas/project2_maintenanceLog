@@ -46,7 +46,7 @@ const newFormHandler = async (event) => {
   document
     .querySelector('.new-vehicle-form')
     .addEventListener('submit', newFormHandler);
-    document
-    .querySelector('.vehicle-list')
-    .addEventListener('click', delButtonHandler);
+    // document
+    // .querySelector('.vehicle-list')
+    // .addEventListener('click', delButtonHandler);
   

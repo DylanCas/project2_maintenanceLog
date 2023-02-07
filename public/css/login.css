@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary: #395792f5;
+    --secondary:  #554522;
+    --tertiary: #463737;
+    /* --quatrinary: #6c6b67;
+    --light: #ebebeb;
+    --dark: #182c23;
+    --error: rgb(228, 46, 1);*/
+    --delete: red;
+    --border-radius: 0.3rem; 
+  }
+  
+  #hide {
+    display: none;
+  }
+
+body { 
+    background-image: url("../images/engine-repair.jpg"); 
+    /* background-color: slategray; */
+    height: auto;
+    max-width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#accContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10%;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: column; */
+    max-width: 100%;
+} 
+
+ form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+} 
+ 
+input {
+    display: flex; 
+    justify-content: center; 
+    background-color: white;
+    border-radius: 5px;
+}
+
+.form-group1, .form-group2 {
+    padding: 5px;
+}
+
+#login-con, #signup-con {
+    display: flex;
+    background-color: var(--tertiary);
+    color: white;
+    padding: 10px;
+    max-width: 384.27px;
+    padding: 50px;
+    margin: 3%;
+    border-radius: 20px;
+    justify-content: center;
+}
+
+button {
+    border-radius: 5px;
+    margin: 10px 5px 0 5px;
+    padding: 5px;
+} 
+
+#access {
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--primary);
+  gap: 25%;
+  align-items: center;
+}
+
+
+
+#homeIcon {
+background: url('https://cdn-icons-png.flaticon.com/64/3113/3113468.png');
+height: 64px;
+width: 64px;
+flex-basis: auto;
+align-self: left;
+align-items: center;
+}
+
+#home, #logout {
+  background-color: var(--secondary);
+  color: white;
+  border: 0;
+  /* flex-grow: 1; */
+  /* border-radius: 5px; */
+  padding: 10px;
+  font-size: 20px;
+  border-radius: var(--border-radius)
+}
+
+#home {
+  margin-right: 30px;
+}
+
+h1 {
+  align-self: center; 
+  flex-basis: auto;
+  margin-left: 150px;
+}
+
+.nav {
+  /* background-color: #111; */
+  height: 75px;
+  align-self: right;
+  align-items: center;
+  flex-basis: auto;
+}
